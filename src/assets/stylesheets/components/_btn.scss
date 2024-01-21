@@ -1,0 +1,18 @@
+#btn-headphone{
+  z-index: 99;
+  position: absolute;
+  top: 40%;
+  left: 55%;
+  transform: translateX(-50%);
+  border: none;
+  padding: 1rem;
+  border-radius: 25px;
+  background-color: rgba(240, 243, 255, 0.417);
+  color: #ffffff;
+  transition: .3s ease-in-out;
+  cursor: pointer;
+  
+  &:hover{
+    background-color: darken($color: rgba(240, 243, 255, 0.417), $amount: 10);
+  }
+}
