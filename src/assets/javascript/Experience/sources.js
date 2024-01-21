@@ -13,5 +13,10 @@ export default [
     name: 'headphoneModel',
     type: 'gltfModel',
     path: 'models/Items/headphones.glb'
+  },
+  {
+    name: 'buttonModel',
+    type: 'gltfModel',
+    path: 'models/Button/info.glb'
   }
 ]

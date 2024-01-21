@@ -34,6 +34,7 @@ export default class Experience{
     this.world = new World()
     this.raycaster = new Raycaster()
     this.time = new Time()
+    this.animation= new Animation()
 
     // Sizes resize event
     this.sizes.on('resize', ()=>{

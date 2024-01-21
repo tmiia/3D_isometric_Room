@@ -18,6 +18,7 @@ export default class Time extends EventEmitter{
 
     this.resources.on('ready', ()=> {
       this.headphone = this.experience.world.headphone.model.children[0]
+      this.button = this.experience.world.button.model
     })
 
     window.requestAnimationFrame(() => {
@@ -39,13 +40,30 @@ export default class Time extends EventEmitter{
         if(intersects.length)
         {
             this.experience.raycaster.currentIntersect = intersects[0]
-            
+
         }
         else
         {
             this.experience.raycaster.currentIntersect = null
         }
     }
+
+    if(this.button){
+      this.raycaster.setFromCamera(this.mouse, this.camera.instance)
+
+      let intersects = this.raycaster.intersectObject(this.button)
+
+        if(intersects.length)
+        {
+            this.experience.raycaster.currentIntersect = intersects[0]
+
+        }
+        else
+        {
+            this.experience.raycaster.currentIntersect = null
+        }
+    }
+
 
     this.trigger('tick')
 
