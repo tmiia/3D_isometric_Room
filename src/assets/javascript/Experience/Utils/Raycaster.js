@@ -22,8 +22,6 @@ export default class Raycaster extends EventEmitter{
       this.headphone = this.experience.world.headphone.model.children[0]
     })
 
-    console.log(this.experience);
-
     window.addEventListener('mousemove', (event) =>
     {
         this.mouse.x = event.clientX / this.sizes.width * 2 - 1

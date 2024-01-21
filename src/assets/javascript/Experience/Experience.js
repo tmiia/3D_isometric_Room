@@ -44,8 +44,6 @@ export default class Experience{
     this.time.on('tick', ()=>{
       this.update()
     })
-
-    console.log('Here starts a great experience')
   }
 
   resize(){

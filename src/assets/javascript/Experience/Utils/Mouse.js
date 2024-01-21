@@ -22,7 +22,6 @@ export default class Mouse extends EventEmitter{
 
     window.addEventListener('click', () =>
     {
-      console.log('click');
       if(this.raycaster.currentIntersect){
             switch(currentIntersect.object.name)
             {
