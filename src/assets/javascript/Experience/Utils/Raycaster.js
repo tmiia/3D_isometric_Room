@@ -20,7 +20,6 @@ export default class Raycaster extends EventEmitter{
 
     this.resources.on('ready', ()=> {
       this.headphone = this.experience.world.headphone.model.children[0]
-      this.button = this.experience.world.button.model.name
     })
 
     window.addEventListener('mousemove', (event) =>
@@ -31,17 +30,20 @@ export default class Raycaster extends EventEmitter{
 
     window.addEventListener('click', ()=>{
       if(this.currentIntersect){
-        console.log(this.currentIntersect.object.parent.name);
-        console.log(this.button);
         switch(this.currentIntersect.object.parent.name){
           case this.headphone.children[0].name:
             this.animation.openMusicOverlay()
           break
-          case this.button:
-            this.animation.openMusicOverlay()
-          break
         }
       }
+    })
+
+    const btn = document.querySelector('#btn-headphone')
+
+    btn.addEventListener('click', ()=>{
+      btn.classList.toggle('active');
+      btn.disabled = true;
+      this.animation.openMusicOverlay();
     })
   }
 }

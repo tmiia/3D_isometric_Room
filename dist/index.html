@@ -4,27 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home sweet home</title>
-    <link rel="stylesheet" href="./assets/stylesheets/application.scss">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="./assets/index-fbbe1b06.js"></script>
+  <link rel="stylesheet" href="./assets/index-853b6dde.css">
 </head>
 <body>
     <canvas class="webgl"></canvas>
     <button id="btn-headphone"></button>
     <section class="overlay">
-      <header class="overlay__header">
-        <h2>Plonge dans mon univers sonore !</h2>
-        <p>Tu y découvriras les épisodes de mon podcast Dev&moi portant sur l'informatique et sur mon apprentissage en auto-didacte du développement web.</p>
+      <header>
+        <h2>Playlist</h2>
       </header>
 
         <div class="swiper">
           <div class="swiper-wrapper">
             <template id="ytb-template">
               <div class="swiper-slide">
-                <iframe frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="420" height="220" src=""></iframe>
+                <iframe frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="320" height="180" src=""></iframe>
               </div>
             </template>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
           </div>
           <div class="swiper-pagination"></div>
 
@@ -32,6 +35,6 @@
           <div class="swiper-button-next"></div>
         </div>
       </section>
-    <script type="module" src="./assets/javascript/script.js"></script>
+    
 </body>
 </html>

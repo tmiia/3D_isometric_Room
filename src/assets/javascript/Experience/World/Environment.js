@@ -10,7 +10,7 @@ export default class Environment
         this.ressources = this.experience.resources
 
         this.setFog()
-        // this.setAmbiantLight()
+        this.setAmbiantLight()
         this.setMoonLight()
         this.setDeskLight()
         this.setStanLight()
@@ -22,7 +22,7 @@ export default class Environment
     }
 
     setAmbiantLight(){
-      this.ambientLight = new THREE.AmbientLight('#b9d5ff', 0.12)
+      this.ambientLight = new THREE.AmbientLight('#b9d5ff', 0.15)
       this.scene.add(this.ambientLight)
     }
 
@@ -40,7 +40,7 @@ export default class Environment
     }
 
     setDeskLight(){
-      this.spotLightDesk = new THREE.SpotLight('#E69466', 4.5, 10, Math.PI * 0.4, 0.25, 1)
+      this.spotLightDesk = new THREE.SpotLight('#E69466', 0.9, 10, Math.PI * 0.4, 0.25, 1)
       this.spotLightDesk.position.set(1.75, 1.85, -1.2)
       this.spotLightDesk.shadow.mapSize.width = 1024;
       this.spotLightDesk.shadow.mapSize.height = 1024;
@@ -51,7 +51,7 @@ export default class Environment
     }
 
     setStanLight(){
-      this.standLight = new THREE.SpotLight(0xffffff, 4.5, 10, Math.PI / 4, 0.25, 1)
+      this.standLight = new THREE.SpotLight(0xffffff, 0.5, 10, Math.PI / 4, 0.25, 1)
       this.standLight.position.set(-0.25, 2.2, 0.75)
       this.scene.add(this.standLight)
 

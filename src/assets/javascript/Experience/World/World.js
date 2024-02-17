@@ -1,9 +1,9 @@
 import Experience from '../Experience.js'
-import Button from './Button.js'
 import Environment from './Environment.js'
 import Floor from './Floor.js'
 import Headphone from './Headphone.js'
 import Room from './Room.js'
+import Window from './Window.js'
 
 export default class World
 {
@@ -19,7 +19,7 @@ export default class World
           this.floor = new Floor()
           this.room = new Room()
           this.headphone = new Headphone()
-          this.button = new Button()
+          this.window = new Window()
           this.environment = new Environment()
         })
     }

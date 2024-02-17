@@ -1,4 +1,5 @@
 import glsl from 'vite-plugin-glsl'
+import envCompatible from 'vite-plugin-env-compatible';
 
 export default {
     root: 'src/',
@@ -17,6 +18,7 @@ export default {
     },
     plugins:
     [
-        glsl()
+        glsl(),
+        envCompatible()
     ]
 }

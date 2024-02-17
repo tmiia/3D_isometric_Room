@@ -15,8 +15,13 @@ export default [
     path: 'models/Items/headphones.glb'
   },
   {
-    name: 'buttonModel',
+    name: 'windowModel',
     type: 'gltfModel',
-    path: 'models/Button/info.glb'
+    path: 'models/window.glb'
+  },
+  {
+    name: 'chairModel',
+    type: 'gltfModel',
+    path: 'models/chair.glb'
   }
 ]

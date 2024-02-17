@@ -1,8 +1,8 @@
 #btn-headphone{
   z-index: 99;
   position: absolute;
-  top: 40%;
-  left: 55%;
+  top: 50%;
+  left: 69%;
   transform: translateX(-50%);
   border: none;
   padding: 1rem;
@@ -11,8 +11,13 @@
   color: #ffffff;
   transition: .3s ease-in-out;
   cursor: pointer;
-  
+
   &:hover{
     background-color: darken($color: rgba(240, 243, 255, 0.417), $amount: 10);
+  }
+
+  &.active{
+    opacity: 0;
+    cursor: initial;
   }
 }
